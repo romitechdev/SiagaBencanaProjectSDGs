@@ -120,3 +120,7 @@ MIT License © 2025 - romiwebdev
 ## 📣 Contributing
 
 Pull requests are welcome! Feel free to fork this repo and submit a PR if you'd like to help develop further features.
+
+<!-- last-updated -->
+_Last updated: 2026-09-05_
+
