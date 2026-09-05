@@ -1,43 +1,43 @@
 # 🌍 SiagaBencanaBojonegoro
 
-**SiagaBencanaBojonegoro** adalah aplikasi web berbasis **Next.js** dan **Tailwind CSS** yang dirancang untuk mendukung _Sustainable Development Goals (SDGs)_, khususnya dalam hal **monitoring dan kesiapsiagaan bencana** di Kabupaten Bojonegoro, Jawa Timur.
+**SiagaBencanaBojonegoro** is a web application built with **Next.js** and **Tailwind CSS**, designed to support the _Sustainable Development Goals (SDGs)_, particularly in terms of **disaster monitoring and preparedness** in Bojonegoro Regency, East Java.
 
-> Aplikasi ini menampilkan Web GIS interaktif, laporan bencana dari masyarakat, dan dashboard statistik untuk membantu tanggap darurat berbasis data.
+> This application features an interactive Web GIS, community disaster reports, and a statistics dashboard to help with data-driven emergency response.
 
 ---
 
 ## 🚀 Tech Stack
 
-- **Next.js** (Pages Router, tanpa folder `src/`)
+- **Next.js** (Pages Router, no `src/` folder)
 - **Tailwind CSS** (via CDN injection)
-- **Leaflet.js** + **OpenStreetMap** (untuk peta interaktif)
-- **Supabase** (untuk autentikasi Google & manajemen user)
+- **Leaflet.js** + **OpenStreetMap** (for the interactive map)
+- **Supabase** (for Google authentication & user management)
 - **Google Cloud Console** (OAuth2.0)
-- **CSV lokal** (sebagai dummy data)
+- **Local CSV** (as dummy data)
 
 ---
 
-## 📦 Fitur Utama
+## 📦 Key Features
 
-### ✅ Beranda (`/`)
-- Peta interaktif dengan **Leaflet.js**
-- Marker tiap **kecamatan di Bojonegoro**
-- Warna marker sesuai tingkat dampak (semakin merah = semakin parah)
-- Popup info: jumlah desa terdampak **banjir, gempa, longsor**
+### ✅ Home (`/`)
+- Interactive map with **Leaflet.js**
+- Markers for each **district (kecamatan) in Bojonegoro**
+- Marker colors based on impact level (redder = more severe)
+- Info popups: number of villages affected by **floods, earthquakes, landslides**
 
-### ✅ Laporkan Bencana (`/laporkan`)
-- Form laporan bencana (pilih kecamatan, jenis bencana, deskripsi, upload foto)
-- Waktu tercatat otomatis
-- Daftar laporan dummy dengan status: `Menunggu`, `Terkonfirmasi`, `Hoax`
+### ✅ Report a Disaster (`/laporkan`)
+- Disaster report form (select district, disaster type, description, photo upload)
+- Timestamp recorded automatically
+- Dummy report list with statuses: `Menunggu`, `Terkonfirmasi`, `Hoax`
 
-### ✅ Dashboard Admin (`/admin`)
-- Statistik laporan dummy (total laporan, status)
-- Tabel manajemen laporan (edit, ubah status, hapus)
+### ✅ Admin Dashboard (`/admin`)
+- Dummy report statistics (total reports, statuses)
+- Report management table (edit, change status, delete)
 
 ---
 
-## 🔐 Akses Admin
-Akses halaman `/admin` dibatasi hanya untuk email yang ditentukan di `.env`:
+## 🔐 Admin Access
+Access to the `/admin` page is restricted to the email defined in `.env`:
 
 ```env
 NEXT_PUBLIC_ADMIN_EMAIL=youremail@example.com
@@ -45,7 +45,7 @@ NEXT_PUBLIC_ADMIN_EMAIL=youremail@example.com
 
 ---
 
-## 🔧 Struktur Proyek
+## 🔧 Project Structure
 
 ```
 /pages
@@ -62,7 +62,7 @@ NEXT_PUBLIC_ADMIN_EMAIL=youremail@example.com
 
 ---
 
-## ⚙️ Instalasi Lokal
+## ⚙️ Local Installation
 
 ```bash
 git clone https://github.com/romiwebdev/SiagaBencanaProjectSDGs.git
@@ -71,7 +71,7 @@ npm install
 npm run dev
 ```
 
-Tambahkan file `.env.local`:
+Add a `.env.local` file:
 
 ```env
 NEXT_PUBLIC_SUPABASE_URL=...
@@ -84,42 +84,39 @@ NEXT_PUBLIC_SUPABASE_REDIRECT=http://localhost:3000/auth/callback
 
 ## 🌐 Deployment
 
-1. **Push ke GitHub**
-2. **Hubungkan ke [Vercel](https://vercel.com/)**
-3. **Isi environment variables di Vercel sesuai `.env.local`**
+1. **Push to GitHub**
+2. **Connect to [Vercel](https://vercel.com/)**
+3. **Set the environment variables in Vercel according to `.env.local`**
 
 ---
 
 ## 🗺️ SEO & Sitemap
 
-* Favicon lengkap (semua ukuran) tersedia di `/public`
-* Sitemap dan robots.txt dihasilkan otomatis
-* Meta tag SEO friendly ada di semua halaman utama
+* Full favicon set (all sizes) is available in `/public`
+* Sitemap and robots.txt are generated automatically
+* SEO-friendly meta tags on all main pages
 
 ---
 
-## ✅ SDGs Goals Yang Didukung
+## ✅ Supported SDG Goals
 
 * **Goal 11: Sustainable Cities and Communities**
 * **Goal 13: Climate Action**
 
 ---
 
-## 📌 Fokus Wilayah
+## 📌 Focused Area
 
-**Kabupaten Bojonegoro, Jawa Timur – Indonesia**
+**Bojonegoro Regency, East Java – Indonesia**
 
 ---
 
-## 📄 Lisensi
+## 📄 License
 
 MIT License © 2025 - romiwebdev
 
 ---
 
-## 📣 Kontribusi
+## 📣 Contributing
 
-Pull Request terbuka! Silakan fork repo ini dan ajukan PR jika ingin membantu mengembangkan fitur lebih lanjut.
-
-```
-
+Pull requests are welcome! Feel free to fork this repo and submit a PR if you'd like to help develop further features.
